@@ -1,0 +1,11 @@
+{% extends "QandA/layout.html" %}
+
+{% block body %}
+    <h1> Add Text: </h1>
+    <form action="{% url 'QandA:addText' %}" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit">
+    </form>
+    <a href="{% url 'QandA:index' %}">View Text</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "QandA/layout.html" %}
+{% block body %}
+    <ul>
+        <h3>Text</h3>
+        <p>{{request.session.Text}}</p>
+        <h3>Question</h3>
+        <p>{{request.session.QuestionSession}}</p>
+        <h3>Answer</h3>
+        {{request.session.AnswerSession}}
+    </ul>
+    <a href="{% url 'QandA:addText' %}">Add a New Text</a>
+    <a href="{% url 'QandA:addQuestion' %}">Ask a New Question</a>
+{% endblock %}
