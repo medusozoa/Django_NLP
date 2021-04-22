@@ -91,7 +91,3 @@ def answer():
     res = d['best_span_str']
 
     return res
-
-
-def changer1(item):
-    return item + "changer"
